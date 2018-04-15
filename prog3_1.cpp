@@ -12,15 +12,15 @@
 which will be a Lua file and then execute it. */
 int main(int argc, char *argv[]) {
   if(argc != 2) { // program counts as an arguement NOTE: starts at zero
-    std::cout << std::endl;
-    std::cout << "This program expects a single command line argument." << std::endl;
-    return 1; // end it; the user broke my stuff
+    printf("\n");
+    printf("This program expects a single command line argument.\n");
+    return 0; // end it; the user broke my stuff
   }
 
-    lua::lua_State *L = luaL_newstate(); // newState makes compiler mad, bc cant link
+  lua_State *L = luaL_newstate(); // newState makes compiler mad, bc cant link
      // allocate lua stack on the heap auxilalary lib
-  lua::  luaL_openlibs(L); // puts things inside box for Lua to use
-  lua::  luaL_dofile(L,argv[1]);
-  lua::  luaL_close(L); // always do this
+   luaL_openlibs(L); // puts things inside box for Lua to use
+   luaL_dofile(L,argv[1]);
+   luaL_close(L); // always do this
     return 0;
   }
