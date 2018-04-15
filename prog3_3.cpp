@@ -9,6 +9,7 @@ extern "C" {
 
 
 int main(int argc, char* argv[]) {
+printf("Assignment #3-1, Mariano Gutierrez, margutierrez75@gmail.com\n");
 char buff[256]; // allocated buffers
 char tolua[256];
 lua_State *L = luaL_newstate();
