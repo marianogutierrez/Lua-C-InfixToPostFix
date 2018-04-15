@@ -92,8 +92,8 @@ for tok in arg: gmatch("%S") do -- splits it by the space
         then -- must be a number
         q:enqueue(tok)
     else
-        while(precedence(tok,stack.peek()) == true) do
-            q:enqueue(stack.pop())
+        while(precedence(tok,stk:peek()) == true) do
+            q:enqueue(stk:pop())
             stk:push(tok)
             end
     stk:push(tok)
