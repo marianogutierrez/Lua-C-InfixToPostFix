@@ -16,11 +16,11 @@ stack = {
 queue = {
     len = 0
     data = {}
-    front = 1 
+    front = 1
 } 
 
-stack = object:new(stack)
-queue = object:new(queue)
+stk = object:new(stack)
+q = object:new(queue)
 
 ----- STACK
 function stack:push(x) -- 
@@ -48,7 +48,7 @@ end
 ------- QUEUE
 function queue:enqueue(x) 
      self.data[self.len] = x
-     back = len + 1
+     len =len + 1
 end
 
 
@@ -59,6 +59,7 @@ end
     local mytok = self.tok[front]
     --self.data.table.remove(front); 
     self.len = self.len - 1
+    self.front = self.front +1
     return mytok
 
 end
@@ -76,10 +77,9 @@ if (input == "*" or "/") then
         else
             return false
 elseif (input == "+" or "-") then
-    if(comp ==  "(" or ")" or "*" or "/" or "+") then
+    if(comp ==  "(" or ")" or "*" or "/" or "+" or "-") then
     return true
        else return false
-
 else
    return false -- nil 
 
@@ -91,21 +91,21 @@ function InfixtoPostfix(str)
 for tok in arg: gmatch("%S") do -- splits it by the space 
     if( tok not( "(" or ")" or "*" or "/" or "+" or "-"))
         then -- must be a number
-        queue.enqueue(tok)
+        q.enqueue(tok)
     else
         while(precedence(tok,stack.peek()) == true) do
-            queue.enqueue(stack.pop())
+            q.enqueue(stack.pop())
             end
-    stack.push(tok)
+    stk.push(tok)
 end -- for / while not empty 
 -- finally
-while(stack.len not 0) 
+while(stk.len not 0) 
     do
-        queue.enqueue(stack.pop)
+        q.enqueue(stack.pop)
 end
 
 local out = {}
- while(queue.len not 0)
+ while(q.len not 0)
     do
         table.insert(out,queue.dequeue())
 end
