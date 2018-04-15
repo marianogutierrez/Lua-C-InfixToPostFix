@@ -101,7 +101,7 @@ end -- for / while not empty
 -- finally
 while(stk.len not 0) 
     do
-        q.enqueue(stack.pop())
+        q.enqueue(stk.pop())
 end
 
 local out = {}
