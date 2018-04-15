@@ -90,18 +90,18 @@ function InfixToPostfix(str)
 for tok in arg: gmatch("%S") do -- splits it by the space 
     if( tok not( "(" or ")" or "*" or "/" or "+" or "-"))
         then -- must be a number
-        q.enqueue(tok)
+        q:enqueue(tok)
     else
         while(precedence(tok,stack.peek()) == true) do
-            q.enqueue(stack.pop())
-            stk.push(tok)
+            q:enqueue(stack.pop())
+            stk:push(tok)
             end
-    stk.push(tok)
+    stk:push(tok)
 end -- for / while not empty 
 -- finally
 while(stk.len not 0) 
     do
-        q.enqueue(stk.pop())
+        q:enqueue(stk:pop())
 end
 
 local out = {}
