@@ -83,7 +83,7 @@ else
    return false -- nil 
 
 
-function InfixtoPostfix(str)
+function InfixToPostfix(str)
     
 -- Tokenizes the input string by space, apply algo, and return postfix string
     local arg = str
