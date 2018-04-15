@@ -3,6 +3,7 @@
 #include "lualib.h"
 #include "luaxlib.h" // lua auxiallry  NOTE: L AUX
 // C is the host and thus defines everything
+// g++ prog3_1.cpp – o prog3_1 – I lua - 5.3.4/src – L lua - 5.3.4/src – l lua – l m – l dl
 
 using namespace std;
 /*This program will take in a single command line arg
@@ -17,5 +18,7 @@ int main(int argc, char *argv[]) {
     lua_State *L = luaL_newstate(); // newState makes compiler mad, bc cant link
      // allocate lua stack on the heap auxilalary lib
     luaL_openlibs(L); // puts things inside box for Lua to use
-    luaL_loadfile(L,argv[1]);
+    luaL_dofile(L,argv[1]);
+    luaL_close(L); // always do this
+    return 0;
   }
