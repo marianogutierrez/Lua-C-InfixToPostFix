@@ -20,7 +20,7 @@ luaL_dofile(L,argv[1]);
 fgets(buff,256,stdin);
 buff[strlen(buff)-1] = 0; // null it cause appends newline
 sprintf(tolua,"return InfixToPostfix(\"%s\")", buff); // * auto terminated with null
-luaL_dostring(L,buff); // Lua please take this string and execute it
+luaL_dostring(L,tolua); // Lua please take this string and execute it
 
 
 const char *output = luaL_checkstring(L,1); // 1 mean first arguement to whatever was being called
