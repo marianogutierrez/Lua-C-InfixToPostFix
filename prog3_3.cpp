@@ -20,11 +20,12 @@ luaL_dofile(L,argv[1]);
 fgets(buff,256,stdin);
 buff[strlen(buff)-1] = 0; // null it cause appends newline
 sprintf(tolua,"return InfixToPostfix(\"%s\")", buff); // * auto terminated with null
+// sprintf(putin, string, from)  the parameter order
 luaL_dostring(L,tolua); // Lua please take this string and execute it
 
 
 const char *output = luaL_checkstring(L,1); // 1 mean first arguement to whatever was being called
-printf("%s\n", output);
+printf("%s\n", output); // print it out 
 lua_close(L); // always do this
 return 0;
 }
