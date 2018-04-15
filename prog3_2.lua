@@ -107,7 +107,7 @@ end
 local out = {}
  while(q.len not 0)
     do
-        table.insert(out,queue.dequeue())
+        table.insert(out,q.dequeue())
 end
 
 return out
