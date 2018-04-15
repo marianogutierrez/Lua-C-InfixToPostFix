@@ -57,9 +57,8 @@ if(self.len ==0) then
     print("nada)
 end
     local mytok = self.tok[front]
-    --self.data.table.remove(front); 
+    table.remove(self.data,front); 
     self.len = self.len - 1
-    self.front = self.front +1
     return mytok
 
 end
