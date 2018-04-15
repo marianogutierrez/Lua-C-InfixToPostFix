@@ -106,7 +106,7 @@ end
 a = ""
  for i = 1, #out do
    a = a..out[i]
-   a = a." "
+   a = a.." "
 end
 return a
  -- thought this was the for loop
