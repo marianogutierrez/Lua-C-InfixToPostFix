@@ -94,6 +94,7 @@ for tok in arg: gmatch("%S") do -- splits it by the space
     else
         while(precedence(tok,stack.peek()) == true) do
             q.enqueue(stack.pop())
+            stk.push(tok)
             end
     stk.push(tok)
 end -- for / while not empty 
