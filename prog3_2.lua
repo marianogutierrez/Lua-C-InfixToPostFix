@@ -21,7 +21,6 @@ end
 
 function stack:pop()
     if(self.len == 0) then
-    print("No toks")
     return
 end
     local mytok = self.tok[self.len]
@@ -33,10 +32,9 @@ end
 function stack:peek()
 
   if(self.len == 0) then
-    print("No toks")
     return
 end
-    return self.tok[self.len] -- LIFO
+    return self.tok[self.len] -- retrieve op to check
 end
 ------- QUEUE
 function queue:enqueue(x)
@@ -61,24 +59,23 @@ end
 function precedence(input,comp)
     if(input == "(" or input == ")" and comp ==  "(" or comp == ")")  then
         return true -- against itself
-    else
-        return false; -- higher always
-    end
-if (input == "*" or "/") then
-        if(comp == "(" or ")" or "*" or "/") then
+
+elseif (input == "*" or input == "/") then
+        if(comp == "(" or comp == ")" or comp == "*" or comp == "/") then
             return true -- lower or equal
         else
             return false
           end
-elseif (input == "+" or "-") then
-    if(comp ==  "(" or ")" or "*" or "/" or "+" or "-") then
+
+elseif (input == "+" or input =="-") then
+    if(comp ==  "(" or comp == ")" or comp =="*" or comp == "/" or comp == "+" or comp == "-") then
     return true
        else return false
        end
-else
-   return false -- nil
 end
+
 end
+
 
 function InfixToPostfix(str)
 
@@ -91,7 +88,6 @@ for tok in arg: gmatch("%S") do -- splits it by the space
     else
         while(precedence(tok,stk:peek()) == true) do
             q:enqueue(stk:pop())
-            stk:push(tok)
             end
     stk:push(tok)
 end
@@ -107,7 +103,10 @@ local out = {}
     do
         table.insert(out,q:dequeue())
 end
-
-return out
+a = ""
+ for i = 1, #out do
+   a = a..out[i]
+end
+return a
  -- thought this was the for loop
  end
