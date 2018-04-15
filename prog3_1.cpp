@@ -1,7 +1,11 @@
+
+extern "C" {
+
 #include <stdio.h>
 #include "lua.h" // connect
 #include "lualib.h"
 #include "luaxlib.h" // lua auxiallry  NOTE: L AUX
+}
 // C is the host and thus defines everything
 // g++ prog3_1.cpp – o prog3_1 – I lua - 5.3.4/src – L lua - 5.3.4/src – l lua – l m – l dl
 
