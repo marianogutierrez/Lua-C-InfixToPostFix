@@ -54,7 +54,7 @@ end
 
 function queue:dequeue()
 if(self.len ==0) then
-    print("nada)
+    return nil
 end
     local mytok = self.tok[front]
     table.remove(self.data,front); 
