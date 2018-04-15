@@ -1,7 +1,5 @@
 
 extern "C" {
-
-#include <stdio.h>
 #include "lua.h" // connect
 #include "lualib.h"
 #include "luaxlib.h" // lua auxiallry  NOTE: L AUX
