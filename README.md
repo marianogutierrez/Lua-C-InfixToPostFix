@@ -8,7 +8,7 @@ prog3_3.cpp
 
 prog3_1
  Example Compile: g++ prog3_1.cpp – o prog3_1 – I lua - 5.3.4/src – L lua
-  - This program sets up the Lua environemnt within c++ and
+  - This program sets up the Lua environment within c++ and
     executes the given Lua file fed through the command line.
 
 
