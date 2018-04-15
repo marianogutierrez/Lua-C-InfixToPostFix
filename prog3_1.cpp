@@ -1,4 +1,5 @@
-
+// Allows use of C header files with c++
+#include <stdio.h>
 extern "C" {
 #include "lua.h" // connect
 #include "lualib.h"
