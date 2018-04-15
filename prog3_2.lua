@@ -33,7 +33,7 @@ function stack:pop()
     print("No toks")
 end
     local mytok = self.tok[self.len]
-   -- self.data.remove()  -- no need for return type apparently.
+   table.remove(self.tok,len)  -- no need for return type apparently.
     self.len = self.len -1
     return mytok
 end
