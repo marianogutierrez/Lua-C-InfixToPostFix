@@ -53,7 +53,7 @@ end
 
 
 function queue:dequeue()
-if(self.len ==0) then
+if(self.len == 0) then
     return nil
 end
     local mytok = self.tok[front]
@@ -101,7 +101,7 @@ end -- for / while not empty
 -- finally
 while(stk.len not 0) 
     do
-        q.enqueue(stack.pop)
+        q.enqueue(stack.pop())
 end
 
 local out = {}
