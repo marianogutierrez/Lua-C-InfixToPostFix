@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
     printf("This program expects a single command line argument.\n");
     return 0; // end it; the user broke my stuff
   }
+  printf("Assignment #3-1, Mariano Gutierrez, margutierrez75@gmail.com\n");
 
   lua_State *L = luaL_newstate(); // newState makes compiler mad, bc cant link
      // allocate lua stack on the heap auxilalary lib
