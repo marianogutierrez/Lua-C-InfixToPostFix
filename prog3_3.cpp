@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
+
 extern "C" {
-#include "lua.h"
+#include "lua.h" // connect
 #include "lualib.h"
-#include "lauxlib.h"
+#include "lauxlib.h" // lua auxiallry  NOTE: L AUX
 }
 
 
