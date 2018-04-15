@@ -19,6 +19,8 @@ prog3_2
    Besides that the program makes use of a user created stack and queue with
    push,pop,enequeue, and dequeue. These are uses to implement the algorithim 
     for conversion from infix: 3 + 4 to post fix: 34+. 
+    
+    
    The psuedo is as follows :
           while(the output is not empty) 
               if(not operator)
