@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string>
 extern "C" {
 #include "lua.h"
 #include "lualib.h"
@@ -15,7 +16,7 @@ luaL_dofile(L,argv[1]);
 // now retrieve from stdin
 
 fgets(buff,256,stdin);
-buff[strnlen(buff)-1] = 0; // null it cause appends newline
+//buff[strnlen(buff)-1] = 0; // null it cause appends newline
 sprintf(tolua,"return InfixToPostfix:(\"%s\")"", buff); // * auto terminated with null
 luaL_dostring(L,buff); // Lua please take this string and execute it
 
