@@ -1,3 +1,4 @@
+print("Assignment #3-2, Mariano Gutierrez, margutierrez75@gmail.com\n")
 object = {} -- allow instancing with meta tables
 function object:new(t)
   local obj = t or {}
