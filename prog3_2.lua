@@ -1,5 +1,4 @@
 
-
 object = {} -- allow instancing with meta tables
 function object:new(t)
   local obj = t or {}
@@ -80,7 +79,7 @@ end
 
 
 function InfixToPostfix(str)
-print("Assignment #3-2, Mariano Gutierrez, margutierrez75@gmail.com\n")
+
 -- Tokenizes the input string by space, apply algo, and return postfix string
     local arg = str
     -- NOTE I could have a seperate function to tokenize the string but it does not interfere with the operation
