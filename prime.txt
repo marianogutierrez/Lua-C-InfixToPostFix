@@ -1,0 +1,42 @@
+
+push 100
+save 1
+push 0
+save 2		
+push 2
+save 3		
+push 2		
+save 4		
+push 12		
+get	3			
+get 4			 
+sub 			
+skip 	
+push 16	
+get 4 		
+get 3			
+mod		
+skip
+get 4
+push 1
+add
+save 4
+push -17
+push 0	
+skip 		
+get 3		
+pop 
+push 1	
+get 1
+sub 			
+save 1		
+push 500	
+get 1			
+skip 			
+get 3			
+push 1
+add
+save 3	
+push -35	
+push 0		
+skip
