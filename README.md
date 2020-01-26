@@ -39,3 +39,7 @@ prog3_3.cpp
    to put the input from stdin onto the buffer for lua to execute. 
    Afterwards, dostring is called for lua to execute the command and then checkstring is
    used to ensure the output was a string. Finally, the postfix statement is printed for all to see.
+   
+   # Compilation: ``` gcc prog3_3.c –o prog3_3 –I lua-5.3.4/src –L lua-5.3.4/src –l lua –l m –l dl ```
+   # Execute: ```./prog3_3 prog3_2.lua
+
